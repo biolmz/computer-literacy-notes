@@ -1,0 +1,15 @@
+# 依赖
+_src/node_modules/
+
+# 构建中间产物
+_src/out_*.pdf
+_src/*.png
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 本地工作记忆，不随仓库发布
+.workbuddy/

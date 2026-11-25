@@ -1,0 +1,48 @@
+# 仓库级 .gitignore
+#
+# 各子目录还有自己的 .gitignore（例如 docker/），两者叠加生效。
+# 这里只收「所有主题共用」的忽略规则：系统垃圾、编辑器、本地工作记忆、构建中间产物。
+# 不要在这里忽略任何讲义 PDF、实验起始文件或脚本——那些都是要发布的正文。
+
+# ---------- 系统 ----------
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# ---------- 编辑器 / IDE ----------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+\#*\#
+.\#*
+
+# ---------- Office 临时文件 ----------
+# 打开 PDF / Word 时生成的锁文件（Windows：~$xxx.docx）
+~$*
+
+# ---------- 本地工作记忆 ----------
+# WorkBuddy 的项目记忆目录，不随仓库发布
+.workbuddy/
+
+# ---------- Node（重建 PDF 时才需要） ----------
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# ---------- 构建中间产物 ----------
+# 打印脚本导出的临时 PDF / 页面截图，成品 PDF 走仓库根目录，不带 out_ 前缀
+out_*.pdf
+*.tmp
+
+# ---------- Python（后续若有 Python 主题） ----------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/

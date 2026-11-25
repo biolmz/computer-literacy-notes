@@ -1,0 +1,15 @@
+# 换行符策略
+#
+# 讲义里的每一步都假设起始文件是 UTF-8 无 BOM + LF。clone 到本地后如果被
+# 自动转成 CRLF，git diff 的输出就会和 PDF 里写的对不上。
+* text=auto eol=lf
+
+# PowerShell 脚本保持 CRLF。文件开头的 UTF-8 BOM 也别去掉——
+# Windows PowerShell 5.1 靠它区分 UTF-8 和 GBK，去掉之后中文会变乱码。
+*.ps1 text eol=crlf
+*.sh  text eol=lf
+
+# 二进制，不做任何换行转换
+*.pdf  binary
+*.png  binary
+*.jpg  binary
